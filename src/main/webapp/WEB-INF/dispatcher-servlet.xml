@@ -15,10 +15,15 @@
     <mvc:annotation-driven/>
     <context:component-scan base-package="app.controllers"/>
 
-    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <!--<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/static/pages/"/>
         <property name="suffix" value=".jsp"/>
-    </bean>
+    </bean>-->
+
+
+    <mvc:resources mapping="/static/**" location="/static/" />
+
+
 
 
     <!--<mvc:resources mapping="/static/**" location="/WEB-INF/jsp/" />-->

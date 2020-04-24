@@ -9,7 +9,7 @@ public class MainController {
     @GetMapping("/")
     public String mainMethod() {
         System.out.println("INDEX GET");
-        return "index";
+        return "static/main.html";
     }
 
 }
