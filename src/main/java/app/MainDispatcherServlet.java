@@ -11,9 +11,7 @@ public class MainDispatcherServlet /*implements WebApplicationInitializer*/ {
                 = new AnnotationConfigWebApplicationContext();
 
         context.setConfigLocation("app.config");
-
         context.register(WebConfig.class);
-
         servletContext.addListener(new ContextLoaderListener(context));
 
         ServletRegistration.Dynamic dispatcher = servletContext
@@ -22,6 +20,5 @@ public class MainDispatcherServlet /*implements WebApplicationInitializer*/ {
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping("/");
     }*/
-
 }
 
