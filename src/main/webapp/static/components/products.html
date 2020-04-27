@@ -1,0 +1,35 @@
+<div>
+    <h1>Products</h1>
+    <div class="container" ng-controller="ProductsController">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-title p-3">
+                        <h3>Spring MVC + AngularJS</h3>
+                    </div>
+                    <div class="card-body">
+                        <table border="1" class="table">
+                            <tr>
+                                <th>Product ID</th>
+                                <th>Product Name</th>
+                                <th>Product Type</th>
+                                <th>Product Price</th>
+                            </tr>
+                            <!-- $scope.products -->
+                            <tr ng-repeat="product in products">
+                                <td> {{ product.productID }}</td>
+                                <td>
+                                    <button class="btn btn-outline-dark" ng-click="openProductPage(product.productID)">
+                                        {{ product.productName }}
+                                    </button>
+                                </td>
+                                <td>{{ product.productType }}</td>
+                                <td>{{ product.productPrice }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
