@@ -15,10 +15,13 @@ public class Product {
 
     String productName, productType, productInfo;
 
-    public Product(String productType, String productName) {
+    Integer productPrice;
+
+    public Product(String productType, String productName, Integer productPrice) {
 
         this.productID = UUID.randomUUID();
         this.productType = productType;
         this.productName = productName;
+        this.productPrice = productPrice;
     }
 }

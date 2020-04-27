@@ -1,0 +1,12 @@
+body {
+    background-color: #e5e5e5 !important;
+    color: #343a40 !important;
+}
+
+table{
+    width: 100% !important;
+}
+
+.product-card {
+    width: 50%;
+}

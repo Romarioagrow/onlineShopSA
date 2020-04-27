@@ -2,20 +2,27 @@ package app.controllers;
 
 import app.domain.Product;
 import app.services.ProductService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lombok.extern.java.Log;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Log
 @RestController
 @RequestMapping("/api")
 public class RestApiController {
     private final ProductService productService = new ProductService();
 
+    public final List<Product> products = productService.getAllProducts();
+
     @GetMapping("/products")
     public List<Product> sendAllProducts() {
+        return products;
+    }
 
-        return productService.getAllProducts();
+    @PostMapping("/products/product")
+    public Product getProductData(@RequestBody String productID) {
+        log.info("productID: " + productID);
+        return productService.getProductData(productID, products);
     }
 }

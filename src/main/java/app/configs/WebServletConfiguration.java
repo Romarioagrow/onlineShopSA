@@ -29,13 +29,12 @@ public class WebServletConfiguration implements WebApplicationInitializer {
     Т.е. реестр всех товаров + открытие отдельного товара по ссылке
     Всё это дело нужно мавеном заворачивать сервлет
     Запуск делать на глассфише
-    база H2 embedded
     Главная цель - потренироваться писать и конфигурировать сервлет, так-же тренировка спринга, практика работы с глассфишом
     */
 
 
-/*1.V package WAR файл
+/* 1.V package WAR файл
  * 2.V deploy war to glassfish
  * 3.V servlet mapping
- * 4. angular front
+ * 4.V angular front
  * */
